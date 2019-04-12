@@ -1,0 +1,42 @@
+.del-button {
+    border : 1px solid grey;
+    color :black;
+    background-color: beige;
+    /* padding : 10px 12px; */
+    text-align: center;
+    height : 30px;
+    width: 60px;
+    border-radius: 4px;
+    transition-duration: 0.4s;
+}
+
+.del-button:hover {
+    background-color: grey;
+}
+
+table{
+    border : 2px solid black;
+    border-collapse : collapse;
+    width : 280px;
+}
+
+th {
+    background-color: blanchedalmond;
+    color : black;
+}
+
+
+th, td{
+    border : 1px solid black;
+    height : 50px;
+    width : 80px;
+}
+
+/* .del-button-cell {
+    align-items: center;
+    margin : auto;
+} */
+
+.speaker-cell {
+    text-align : center;
+}
