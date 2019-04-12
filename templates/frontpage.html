@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SpeakerRecognitionDemo</title>
+    <script type="text/javascript" src="/static/js/jquery-3.3.1.min.js"></script>
+    <script language="JavaScript" type="text/javascript">
+    </script>
+    <script type="text/javascript" src="/static/js/recorder.js"></script>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+    <body>
+        <div id="enrollment">
+            <p>
+                <h4>Please Enter Speaker Name:</h4>
+            </p>
+            <p>
+                <input type="text" id="speaker_name2" onkeyup="checkUniqueName()"/>
+            </p>
+            <div id="name_exist_error" style="color:red"></div>
+            <p>
+                <input type="button" id="recordbutton" disabled="true" value="record"/>
+                <button id="stopbutton"  disabled="true">stop</button>
+            </p>
+            <p>
+                <!-- <form id="enroll-upload-form" method="POST" enctype="multipart/form-data"> -->
+                <input id="enroll-choose-file" type="file" accept="audio/wav" disabled="true"/>
+                <button id="enroll-upload-button" disabled="true">enroll-upload</button>
+                <!-- </form> -->
+            </p>
+            <p id="upload-audio-enroll"></p>
+        </div>
+        <div id="enrolled_speaker" data-list='{{usn|tojson}}'>
+        
+        </div>
+        <div id="testing">
+            <p><h4>Testing :</h4></p>
+            <p>
+                
+                <button id="test-record-button" >test-record</button>
+                <button id="test-stop-button" disabled="true" >test-stop</button>
+            </p>
+            <p>
+                <input id="test-choose-file" type="file" accept="audio/wav"/>
+                <button id="test-upload-button" >test-upload</button>
+            </p>
+            <p id="p-audio-tag"></p>
+            <p><h4> Result of Testing :</h4><div id='test-result'></div></p>
+        </div>
+        <div id="etc">    
+            <p>
+                <input type="button" id="toAlert" value="To Alert" onclick="fromJS();">
+            </p>
+        </div>
+        <script onload="getTable();" src="static/js/AudioRecording.js" ></script>
+    </body>
+
+</html>
+
