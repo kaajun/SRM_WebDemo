@@ -1,0 +1,99 @@
+#recordbutton {
+    position: relative;
+    top:-60px;
+    left:260px;
+}
+
+#stopbutton {
+    position: relative;
+    top:-60px;
+    left:270px;
+}
+
+#test-record-button {
+    position: relative;
+    top : -40px;
+    left : 300px;
+}
+
+#test-stop-button {
+    position: relative;
+    top : -40px;
+    left : 320px;
+}
+
+#test-record-label {
+    position : relative;
+    top : -40px;
+    left : 320px;
+}
+
+#test-stop-label {
+    position : relative;
+    top : -40px;
+    left : 320px;
+}
+
+.record-button {
+    background: transparent url(record.png) no-repeat center top;
+    background-size: 100%;
+    background-position: 50% 50%;
+    border-radius: 50%;
+    width:50px;
+    height:50px;
+    box-shadow: 2px 2px 9px 0px rgba(0,0,0,0.75)
+}
+.record-button:disabled{
+    box-shadow: none;
+    filter: grayscale(100%);
+}
+
+.record-button:active,.record-button:focus,.record-button.active {
+    box-shadow: none;
+}
+
+.stop-button {
+    background: transparent url(stop.png) no-repeat center top;
+    background-size: 100%;
+    background-position: 50% 50%;
+    border-radius: 50%;
+    width:50px;
+    height:50px;
+    box-shadow: 2px 2px 9px 0px rgba(0,0,0,0.75)
+}
+
+.stop-button:disabled{
+    box-shadow: none;
+    filter: grayscale(100%);
+}
+
+.stop-button:active,.stop-button:focus,.stop-button.active {
+    box-shadow: none;
+}
+
+.upload-button {
+    background: white url(upload2.png) no-repeat center top;
+    background-size: 100%;
+    background-position: 50% 50%;
+    width:35px;
+    height:35px;
+    box-shadow :2px 2px 9px 0px rgba(0,0,0,0.75);
+    border-width: 0px;
+    border-style: outset;
+    border-radius : 50%;
+}
+
+.upload-button:disabled{
+    box-shadow: none;
+    filter: grayscale(100%);
+}
+
+/* .file-input {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.label-file {
+    cursor: pointer;
+} */
