@@ -7,51 +7,79 @@
     </script>
     <script type="text/javascript" src="/static/js/recorder.js"></script>
     <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="/static/css/input_styles.css">
+    <link rel="stylesheet" href="/static/css/table_styles.css">
+    <link rel="stylesheet" href="/static/css/button_styles.css">
 </head>
     <body>
-        <div id="enrollment">
-            <p>
-                <h4>Please Enter Speaker Name:</h4>
-            </p>
-            <p>
-                <input type="text" id="speaker_name2" onkeyup="checkUniqueName()"/>
-            </p>
-            <div id="name_exist_error" style="color:red"></div>
-            <p>
-                <input type="button" id="recordbutton" disabled="true" value="record"/>
-                <button id="stopbutton"  disabled="true">stop</button>
-            </p>
-            <p>
-                <!-- <form id="enroll-upload-form" method="POST" enctype="multipart/form-data"> -->
-                <input id="enroll-choose-file" type="file" accept="audio/wav" disabled="true"/>
-                <button id="enroll-upload-button" disabled="true">enroll-upload</button>
-                <!-- </form> -->
-            </p>
-            <p id="upload-audio-enroll"></p>
+        <div id="title-div">
+            <h1 id='title'>Speaker Recognition Web Demo</h1>
+            <p id="title-description">Panasonic Research and Development Center Singapore</p>
         </div>
-        <div id="enrolled_speaker" data-list='{{usn|tojson}}'>
-        
-        </div>
-        <div id="testing">
-            <p><h4>Testing :</h4></p>
-            <p>
+        <div class="row-to-clear">
+            <div id="enrollment" class="column">
+                <div id="enrollment-header" class="column-header">Enrollment-Section</div>
+                <div id="enrollment-body" class="column-body">
+                    <label class="field a-field a-field_a1 page__field">
+                        <input id="speaker_name2" class="field__input a-field__input" placeholder="e.g. Jimmy" onkeyup="checkUniqueName()" required>
+                        <span class="a-field__label-wrap">
+                            <span class="a-field__label">Speaker Name</span>
+                        </span>
+                        <div class="input-bar"></div>
+                    </label>
+                    
+                    <!-- <p>
+                        <h4>Please Enter Speaker Name:</h4>
+                    </p>
+                    <div class="input-group">
+                        <input type="text" id="speaker_name2" onkeyup="checkUniqueName()" required="required" class="speakername"/>
+                        <label id="input-label" for="speaker_name2">Speaker Name</label>
+                        <div class="input-bar"></div>
+                    </div> -->
+                    <div id="name_exist_error" style="color:red"></div>
+                    <p>
+                        <input title="record" type="button" id="recordbutton" disabled="true" class="enroll-button record-button"/>
+                        <button title="stop" id="stopbutton"  disabled="true" class="enroll-button stop-button"></button>
+                    </p>
+                    <p>
+                        <!-- <form id="enroll-upload-form" method="POST" enctype="multipart/form-data"> -->
+                        <!-- <label class="label-file" for="enroll-choose-file">Choose File...</label> -->
+                        <input class="file-input" id="enroll-choose-file" type="file" accept="audio/wav" disabled="true"/>
+                        <button title="upload" id="enroll-upload-button" disabled="true" class="upload-button"></button>
+                        <!-- </form> -->
+                    </p>
+                    <p id="upload-audio-enroll"></p>
+                    <div id="enrolled-speaker" data-list='{{usn|tojson}}'>
+                    </div>
+                </div>
                 
-                <button id="test-record-button" >test-record</button>
-                <button id="test-stop-button" disabled="true" >test-stop</button>
-            </p>
-            <p>
-                <input id="test-choose-file" type="file" accept="audio/wav"/>
-                <button id="test-upload-button" >test-upload</button>
-            </p>
-            <p id="p-audio-tag"></p>
-            <p><h4> Result of Testing :</h4><div id='test-result'></div></p>
+            </div>
+        
+            <div id="testing" class="column">
+                <div id="testing-header" class="column-header">Testing-Section</div>
+                <div id="testing-body" class="column-body">
+                    <p><h4>Testing :</h4></p>
+                    <p>
+                        <button title="record" id="test-record-button" class="test-button record-button"></button>
+                        <button title="stop" id="test-stop-button" disabled="true" class="test-button stop-button"></button>
+                    </p>
+                    <p>
+                        <!-- <label class="label-file" for="test-choose-file">Choose File...</label> -->
+                        <input class="file-input" id="test-choose-file" type="file" accept="audio/wav"/>
+                        <button title="upload" id="test-upload-button" class="upload-button" ></button>
+                    </p>
+                    <p id="p-audio-tag"></p>
+                    <p><h4> Result of Testing :</h4><div id='test-result'></div></p>
+                </div>
+            </div>
+            <div id="etc">    
+                <!-- <p>
+                    <input type="button" id="toAlert" value="To Alert" onclick="fromJS();">
+                </p> -->
+            </div>
         </div>
-        <div id="etc">    
-            <p>
-                <input type="button" id="toAlert" value="To Alert" onclick="fromJS();">
-            </p>
-        </div>
-        <script onload="getTable();" src="static/js/AudioRecording.js" ></script>
+        
+    <script onload="getTable();" src="static/js/AudioRecording.js" ></script>
     </body>
 
 </html>
